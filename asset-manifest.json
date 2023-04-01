@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cloud-storage/static/css/main.b4f35fba.css",
+    "main.js": "/cloud-storage/static/js/main.de62d514.js",
+    "static/media/google-icon.svg": "/cloud-storage/static/media/google-icon.15b6cb611e2ef4ea86dc.svg",
+    "index.html": "/cloud-storage/index.html",
+    "static/media/close.svg": "/cloud-storage/static/media/close.97d4c0a10ac97607dc65.svg",
+    "main.b4f35fba.css.map": "/cloud-storage/static/css/main.b4f35fba.css.map",
+    "main.de62d514.js.map": "/cloud-storage/static/js/main.de62d514.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4f35fba.css",
+    "static/js/main.de62d514.js"
+  ]
+}
