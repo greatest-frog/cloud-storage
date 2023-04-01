@@ -1,0 +1,45 @@
+.header {
+    position: sticky;
+    top: 0;
+    color: var(--background-color);
+    background-color: var(--light-blue);
+    width: 100%;
+    height: 64px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.naming {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.to-login {
+    font-size: 16px;
+}
+
+.naming,
+.to-login {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.log-out {
+    color: #f5f5f5;
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+}
+
+.log-out:hover {
+    color: #e2e2e2;
+    background-color: transparent;
+}
