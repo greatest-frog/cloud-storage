@@ -2,6 +2,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { useState } from "react";
 import { Link, redirect } from "react-router-dom";
 
+import Button from "../../UI/Button/Button";
 import styles from "./Auth.module.css";
 
 const Auth = ({ settings }) => {
@@ -10,6 +11,7 @@ const Auth = ({ settings }) => {
 
   const googleSignIn = async () => {
     const provider = new GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
     try {
       await signInWithPopup(getAuth(), provider);
     } catch (err) {
@@ -22,7 +24,7 @@ const Auth = ({ settings }) => {
   return (
     <div className={styles.auth}>
       <form
-        onSubmit={() => settings.handleSubmit(email, password)}
+        onSubmit={(e) => settings.handleSubmit(e, email, password)}
         className={styles.form}
       >
         <label>
@@ -54,7 +56,7 @@ const Auth = ({ settings }) => {
             Forgot your password? <Link to="/restore">Restore it</Link>.
           </div>
         )}
-        <button type="submit">{settings.buttonPlaceholder}</button>
+        <Button>{settings.buttonPlaceholder}</Button>
       </form>
       <span>
         {settings.question}{" "}

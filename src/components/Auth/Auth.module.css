@@ -13,7 +13,9 @@
 
 .error {
     font-size: 14px;
+
     color: red;
+
     width: 250px;
 }
 
@@ -29,10 +31,12 @@
 
 .service {
     font-size: 14px;
+    
     width: 200px;
     height: 40px;
     border: 1px solid #cacaca;
-    border-radius: 16px;
+    border-radius: 12px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +47,7 @@
     background-image: url("./google-icon.svg");
     background-size: 24px;
     background-repeat: no-repeat;
+    
     width: 25px;
     height: 25px;
 }

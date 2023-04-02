@@ -9,9 +9,11 @@ import styles from "./LoginPage.module.css";
 const LoginPage = () => {
   const [user] = useAuthState(getAuth());
 
-  const handleSubmit = async (email, password) => {
+  const handleSubmit = async (e, email, password) => {
+    e.preventDefault();
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
+      console.log("ok");
     } catch (err) {
       const errorString = err.toString();
       if (

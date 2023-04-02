@@ -9,7 +9,8 @@ import styles from "./RegisterPage.module.css";
 const RegisterPage = () => {
   const [user] = useAuthState(getAuth());
 
-  const handleSubmit = async (email, password) => {
+  const handleSubmit = async (e, email, password) => {
+    e.preventDefault();
     try {
       await createUserWithEmailAndPassword(getAuth(), email, password);
     } catch (err) {

@@ -1,0 +1,21 @@
+.link-wrapper{
+    background-color: var(--light-blue);
+
+    padding: 8px 0;
+    border-radius: 8px;
+
+    transition: var(--default-transition);
+    cursor: pointer;
+}
+
+.link-wrapper:hover {
+    background-color: var(--hover-blue);
+}
+
+.link {
+    text-decoration: none;
+
+    padding: 8px 16px;
+    
+    color: #f5f5f5;
+}
