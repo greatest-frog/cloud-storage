@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Navigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
+import classNames from "classnames";
 
 import PersonInfo from "../../UI/PersonInfo/PersonInfo";
 import styles from "./Header.module.css";
@@ -18,12 +19,10 @@ const Header = ({ border }) => {
 
   return (
     <header
-      className={styles.header}
-      style={
-        border
-          ? { borderBottom: "1px solid #c5c5c5" }
-          : { borderBottom: "none" }
-      }
+      className={classNames(
+        styles.header,
+        border ? styles.border : styles["no-border"]
+      )}
     >
       <Link to="/" className={styles.naming}>
         Frog Cloud

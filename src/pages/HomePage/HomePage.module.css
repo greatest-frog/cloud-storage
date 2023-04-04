@@ -1,6 +1,4 @@
 .home {
-    background-color: #f2f2f2;
-    
     width: 100%;
     height: 100%;
     
@@ -16,18 +14,43 @@
     background-position: center;
 
     width: 100%;
-    height: 350px;
+    min-height: 350px;
     padding: 0 20px;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 
     text-align: center;
 }
 
+.world_heading {
+    font-size: 28px;
+}
+
+.world_paragraph {
+    font-size: 18px;
+}
+
 .world_heading,
 .world_paragraph {
-    background-color: rgba(75, 75, 75, 0.325);
+    background-color: #16161652;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .world_heading {
+        font-size: 24px;
+    }
+    
+    .world_paragraph {
+        font-size: 14px;
+    }
 }

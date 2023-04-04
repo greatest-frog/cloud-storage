@@ -13,9 +13,7 @@ const StoragePage = () => {
     }
   }, [user, navigate]);
 
-
   return <div>Storage Page</div>;
 };
 
 export default StoragePage;
-
