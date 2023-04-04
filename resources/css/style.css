@@ -6,17 +6,30 @@
 
 html,
 body,
-main,
-#root,
-.App {
+#root {
     width: 100%;
     height: 100%;
+}
+
+.App {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 100%;
 }
 
 :root {
     --font-color: #1f1f1d;
     --background-color: #f5f5f5;
-    --border: gray;
+    --border-color: #c5c5c5;
+
     --light-blue: #406fb5;
     --hover-blue: #477cca;
 
@@ -91,13 +104,6 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #477cca;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
 }
 
 .list {
