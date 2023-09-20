@@ -1,36 +1,34 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import React, { useState } from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import Button from "../../UI/Button/Button";
+import ButtonGoogleAuth from "../ButtonGoogleAuth/ButtonGoogleAuth";
 import styles from "./Auth.module.css";
 
-const Auth = ({ settings }) => {
+function Auth({
+  handleSubmit,
+  errorMessage,
+  isRestoreMessage,
+  buttonPlaceholder,
+  question,
+  answer,
+  answerLink,
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const googleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
-    provider.setCustomParameters({ prompt: "select_account" });
-    try {
-      await signInWithPopup(getAuth(), provider);
-    } catch (err) {
-      console.log(err);
-      return redirect("/");
-    }
-    return redirect("/storage");
-  };
-
   return (
-    <div className={styles.auth}>
+    <div className={styles.Auth}>
       <form
-        onSubmit={(e) => settings.handleSubmit(e, email, password)}
-        className={styles.form}
+        onSubmit={(e) => handleSubmit(e, email, password)}
+        className={styles["Auth-Form"]}
       >
-        <label>
+        <label htmlFor="email">
           Email
           <input
             type="email"
+            id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
@@ -39,37 +37,54 @@ const Auth = ({ settings }) => {
           />
         </label>
 
-        {settings.errorMessage && (
-          <div className={styles.error}>{settings.errorMessage}</div>
+        {errorMessage && (
+          <div className={styles["Auth-ErrorMessage"]}>{errorMessage}</div>
         )}
-        <label>
+        <label htmlFor="password">
           Password
           <input
             type="password"
+            id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
         </label>
-        {settings.restore && (
-          <div className={styles.restore}>
+        {isRestoreMessage && (
+          <div className={styles["Auth-RestoreMessage"]}>
             Forgot your password? <Link to="/restore">Restore it</Link>.
           </div>
         )}
-        <Button>{settings.buttonPlaceholder}</Button>
+        <Button>{buttonPlaceholder}</Button>
       </form>
-      <span>
-        {settings.question}{" "}
-        {<Link to={settings.answerLink}>{settings.answer}</Link>}.
-      </span>
-      <div className={styles["service-wrapper"]}>
-        <button onClick={googleSignIn} className={styles.service}>
-          <div className={styles.google}></div>
-          Sign in with Google
-        </button>
+      {question && (
+        <div className={styles["Auth-Question"]}>
+          {question} <Link to={answerLink}>{answer}</Link>.
+        </div>
+      )}
+      <div className={styles["Auth-ServiceWrapper"]}>
+        <ButtonGoogleAuth />
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(Auth);
+
+Auth.defaultProps = {
+  errorMessage: "",
+  isRestoreMessage: false,
+  question: "",
+  answerLink: "",
+  answer: "",
+};
+
+Auth.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string,
+  isRestoreMessage: PropTypes.bool,
+  buttonPlaceholder: PropTypes.string.isRequired,
+  question: PropTypes.string,
+  answerLink: PropTypes.string,
+  answer: PropTypes.string,
+};

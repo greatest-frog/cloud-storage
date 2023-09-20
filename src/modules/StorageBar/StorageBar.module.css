@@ -1,0 +1,74 @@
+.StorageMenu {
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  background-color: var(--color-whitish);
+  height: 100%;
+  min-width: 232px;
+  padding: 8px 16px;
+
+  transition: 0.25s ease-out;
+}
+
+.StorageMenu-ButtonWrapper {
+  display: none;
+}
+
+.StorageMenu-Options {
+  width: 100%;
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.StorageMenu-Option {
+  width: 100%;
+}
+
+.StorageMenu-Progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.StorageMenu-Progress progress {
+  width: 100%;
+}
+
+@media screen and (max-width: 760px) {
+  .StorageMenu {
+    position: absolute;
+    min-width: 48px;
+    max-width: 48px;
+    padding: 7px 8px 8px 8px;
+
+    border-top: 1px solid var(--color-gray);
+    border-right: 1px solid var(--color-gray);
+    border-radius: 0 8px 0 0;
+  }
+
+  .StorageMenu-ButtonWrapper {
+    display: block;
+  }
+
+  .StorageMenu-Options {
+    visibility: hidden;
+  }
+
+  .StorageMenu_position_over {
+    z-index: 1;
+
+    min-width: 232px;
+    max-width: 232px;
+    border-radius: 0 16px 0 0;
+  }
+
+  .StorageMenu_position_over .StorageMenu-Options {
+    visibility: unset;
+  }
+}

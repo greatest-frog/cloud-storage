@@ -1,6 +1,4 @@
-.register {
-    flex: 1;
-    width: 100%;
+.RegisterPage {
     margin-top: 50px;
     
     display: flex;

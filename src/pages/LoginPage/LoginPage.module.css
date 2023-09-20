@@ -1,6 +1,4 @@
-.login {
-    flex: 1;
-    width: 100%;
+.LoginPage {
     margin-top: 50px;
     
     display: flex;

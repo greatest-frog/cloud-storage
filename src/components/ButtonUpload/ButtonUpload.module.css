@@ -1,0 +1,35 @@
+.ButtonUpload {
+  font-weight: normal;
+
+  color: var(--color-whitish);
+  background-color: var(--color-light-blue);
+  transition: var(--transition-default);
+
+  width: 100%;
+  height: 36px;
+  padding: 4px 8px;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.ButtonUpload:hover {
+  background-color: var(--color-hover-blue);
+}
+
+.ButtonUpload-Icon {
+  width: 24px;
+  height: 24px;
+}
+
+.ButtonUpload-Title {
+  margin: auto;
+}
+
+.ButtonUpload-FileInput {
+  display: none;
+}

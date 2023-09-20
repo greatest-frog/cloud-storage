@@ -1,21 +1,21 @@
-.link-wrapper{
-    background-color: var(--light-blue);
+.ButtonLink {
+  background-color: var(--color-light-blue);
 
-    padding: 8px 0;
-    border-radius: 8px;
+  padding: 8px 0;
+  border-radius: 8px;
 
-    transition: var(--default-transition);
-    cursor: pointer;
+  transition: var(--transition-default);
+  cursor: pointer;
 }
 
-.link-wrapper:hover {
-    background-color: var(--hover-blue);
+.ButtonLink:hover {
+  background-color: var(--color-hover-blue);
 }
 
-.link {
-    text-decoration: none;
+.ButtonLink-Link {
+  text-decoration: none;
 
-    padding: 8px 16px;
-    
-    color: #f5f5f5;
+  color: var(--color-whitish);
+
+  padding: 8px 16px;
 }

@@ -1,8 +1,8 @@
-.button {
+.Button {
     font-size: 16px;
 
-    color: #f5f5f5;
-    background-color: var(--light-blue);
+    color: var(--color-whitish);
+    background-color: var(--color-light-blue);
 
     padding: 8px 16px;
     border: none;
@@ -13,6 +13,6 @@
     align-items: center;
 }
 
-.button:hover {
-    background-color: var(--hover-blue);
+.Button:hover {
+    background-color: var(--color-hover-blue);
 }

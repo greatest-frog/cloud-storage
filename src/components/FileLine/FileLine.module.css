@@ -1,0 +1,109 @@
+.FileLine {
+  width: 100%;
+  padding: 3px 10px;
+  border-radius: 10px;
+
+  transition: background-color 0.1s ease-out;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.FileLine:hover {
+  background-color: var(--color-gray);
+}
+
+.FileLine:hover .FileLine-Share {
+  background-color: var(--color-gray);
+}
+
+.FileLine-Name {
+  flex: 1;
+  font-size: 20px;
+}
+
+.FileLine-Info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FileLine-Meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FileLine-Date {
+  width: 100px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.FileLine-Time {
+  width: 55px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.FileLine-Size {
+  width: 100px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.FileLine-Buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FileLine-Download,
+.FileLine-Share {
+  width: 25px;
+  height: 25px;
+}
+
+.FileLine-Download:hover {
+  transform: scale(1.15, 1.15);
+}
+
+.FileLine-Share {
+  transition: transform var(--transition-default);
+  border: none;
+  background-color: var(--color-bg);
+}
+
+.FileLine-Share:hover {
+  background-color: var(--color-bg);
+  transform: scale(1.15, 1.15);
+}
+
+@media screen and (max-width: 750px) {
+  .FileLine-Info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .FileLine-Meta {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .FileLine {
+    flex-direction: column;
+  }
+
+  .FileLine-Buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

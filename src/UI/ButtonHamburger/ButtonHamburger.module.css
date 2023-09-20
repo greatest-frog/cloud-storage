@@ -1,0 +1,50 @@
+.ButtonHamburger {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.ButtonHamburger-Line {
+  position: absolute;
+  left: 0;
+
+  background-color: var(--color-blackish);
+
+  width: 100%;
+  height: 6px;
+  border: none;
+  border-radius: 3px;
+
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.ButtonHamburger-Line_position_first {
+  top: 0;
+}
+
+.ButtonHamburger-Line_position_second,
+.ButtonHamburger-Line_position_third {
+  top: 12px;
+}
+
+.ButtonHamburger-Line_position_fourth {
+  top: 24px;
+}
+
+.ButtonHamburger-Line_position_first.ButtonHamburger-Line_status_open,
+.ButtonHamburger-Line_position_fourth.ButtonHamburger-Line_status_open {
+  width: 0%;
+  top: 12px;
+  left: 50%;
+}
+
+.ButtonHamburger-Line_position_second.ButtonHamburger-Line_status_open {
+  transform: rotate(45deg);
+}
+
+.ButtonHamburger-Line_position_third.ButtonHamburger-Line_status_open {
+  transform: rotate(-45deg);
+}

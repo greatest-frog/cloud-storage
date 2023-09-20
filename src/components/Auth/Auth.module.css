@@ -1,54 +1,30 @@
-.auth {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.Auth {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.Auth-Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.error {
-    font-size: 14px;
+.Auth-ErrorMessage {
+  font-size: 14px;
 
-    color: red;
+  color: var(--color-red);
 
-    width: 250px;
+  width: 250px;
 }
 
-.restore {
-    font-size: 14px;
+.Auth-RestoreMessage {
+  font-size: 14px;
 }
 
-.service-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
+.Auth-ServiceWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
-
-.service {
-    font-size: 14px;
-    
-    width: 200px;
-    height: 40px;
-    border: 1px solid #cacaca;
-    border-radius: 12px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.google {
-    background-image: url("./google-icon.svg");
-    background-size: 24px;
-    background-repeat: no-repeat;
-    
-    width: 25px;
-    height: 25px;
-}
-

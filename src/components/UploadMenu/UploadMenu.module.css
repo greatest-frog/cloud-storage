@@ -1,0 +1,65 @@
+.UploadMenu {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.UploadMenu-Info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.UploadMenu-Functions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.UploadMenu-Function {
+  width: 28px;
+  height: 28px;
+}
+
+.UploadMenu-FunctionButton {
+  background-color: transparent;
+
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.UploadMenu-FunctionButton:hover {
+  background-color: transparent;
+}
+
+.UploadMenu-FunctionButton_function_pause {
+  background-image: url("./SVGs/pause.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.UploadMenu-FunctionButton_function_resume {
+  background-image: url("./SVGs/resume.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.UploadMenu-FunctionButton_function_cancel {
+  background-image: url("./SVGs/cancel.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.UploadMenu-Percent {
+  font-size: 18px;
+}
+
+.UploadMenu-Progress {
+  width: 100%;
+}

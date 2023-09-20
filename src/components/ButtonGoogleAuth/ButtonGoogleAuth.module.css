@@ -1,0 +1,22 @@
+.ButtonGoogleAuth {
+    font-size: 14px;
+    
+    width: 200px;
+    height: 40px;
+    border: 1px solid var(--color-gray);
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.ButtonGoogleAuth-Icon {
+    background-image: url("./google-icon.svg");
+    background-size: 24px;
+    background-repeat: no-repeat;
+    
+    width: 25px;
+    height: 25px;
+}
