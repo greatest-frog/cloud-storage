@@ -8,7 +8,7 @@ import UploadMenu from "../../components/UploadMenu/UploadMenu";
 import styles from "./StorageBar.module.css";
 import Modal from "../../components/Modal/Modal";
 
-function StorageBar() {
+function StorageBar({ setSR }) {
   const [sideOpen, setSideOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -48,10 +48,11 @@ function StorageBar() {
           setUploadStatus("not started");
           setUploadTask();
           setUploadProgress(0);
+          setSR(true);
         }
       );
     }
-  }, [uploadTask, uploadProgress]);
+  }, [uploadTask, uploadProgress, setSR]);
 
   const changeUploadTask = useCallback((upload) => {
     setUploadTask(upload);

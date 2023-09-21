@@ -12,6 +12,7 @@ function StoragePage() {
   const navigate = useNavigate();
   const [user, isLoading] = useAuthState(getAuth());
   const [open, setOpen] = useState(false);
+  const [shouldRerender, setShouldRerender] = useState(false);
 
   useEffect(() => {
     if (!user && !isLoading) {
@@ -23,8 +24,8 @@ function StoragePage() {
 
   return (
     <div className={styles.Storage}>
-      <StorageBar />
-      <Workspace />
+      <StorageBar setSR={setShouldRerender} />
+      <Workspace shouldRerender={shouldRerender} setSR={setShouldRerender} />
       {open && <Modal toggleOpen={toggleOpen} />}
     </div>
   );
