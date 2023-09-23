@@ -125,7 +125,9 @@ function StorageBar({ setSR }) {
         </li>
         {modalOpen &&
           createPortal(
-            <Modal toggleOpen={toggleModalOpen}>Error, please try later</Modal>,
+            <Modal toggleOpen={toggleModalOpen}>
+              Ошибка, попробуйте позже.
+            </Modal>,
             document.body
           )}
       </ul>

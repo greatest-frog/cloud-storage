@@ -154,11 +154,11 @@ function FileLine({ file, setSR }) {
         <a
           className={styles["FileLine-Download"]}
           href={userDownloadURL}
-          title="Download or open file"
+          title="Скачать или открыть файл"
         >
           <img
             src={downloadPhoto}
-            alt="download or open file"
+            alt="Скачать или открыть файл"
             className={styles["FileLine-Icon"]}
           />
         </a>
@@ -168,12 +168,12 @@ function FileLine({ file, setSR }) {
             styles["FileLine-Delete"],
             styles["FileLine-Button"]
           )}
-          title="Delete file"
+          title="Удалить файл"
           onClick={deleteFile}
         >
           <img
             src={deletePhoto}
-            alt="delete file"
+            alt="Удалить файл"
             className={styles["FileLine-Icon"]}
           />
         </button>
@@ -183,12 +183,12 @@ function FileLine({ file, setSR }) {
             styles["FileLine-Share"],
             styles["FileLine-Button"]
           )}
-          title="Share file"
+          title="Поделиться файлом"
           onClick={shareFile}
         >
           <img
             src={sharePhoto}
-            alt="share file"
+            alt="Поделиться файлом"
             className={styles["FileLine-Icon"]}
           />
         </button>
@@ -199,12 +199,12 @@ function FileLine({ file, setSR }) {
               styles["FileLine-StopShare"],
               styles["FileLine-Button"]
             )}
-            title="Stop share file"
+            title="Не делиться файлом"
             onClick={stopShareFile}
           >
             <img
               src={stopSharePhoto}
-              alt="share file"
+              alt="Не делиться файлом"
               className={styles["FileLine-Icon"]}
             />
           </button>

@@ -25,7 +25,7 @@ function Auth({
         className={styles["Auth-Form"]}
       >
         <label htmlFor="email">
-          Email
+          Почта
           <input
             type="email"
             id="email"
@@ -41,7 +41,7 @@ function Auth({
           <div className={styles["Auth-ErrorMessage"]}>{errorMessage}</div>
         )}
         <label htmlFor="password">
-          Password
+          Пароль
           <input
             type="password"
             id="password"
@@ -52,7 +52,7 @@ function Auth({
         </label>
         {isRestoreMessage && (
           <div className={styles["Auth-RestoreMessage"]}>
-            Forgot your password? <Link to="/restore">Restore it</Link>.
+            Забыли пароль? <Link to="/restore">Восстановить</Link>.
           </div>
         )}
         <Button>{buttonPlaceholder}</Button>

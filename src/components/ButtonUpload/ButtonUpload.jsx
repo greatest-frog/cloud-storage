@@ -24,7 +24,7 @@ function ButtonUpload({ changeUploadTask }) {
       className={styles.ButtonUpload}
     >
       <img src={uploadSVG} alt="" className={styles["ButtonUpload-Icon"]} />
-      <span className={styles["ButtonUpload-Title"]}>Upload</span>
+      <span className={styles["ButtonUpload-Title"]}>Загрузить</span>
       <input
         type="file"
         id="upload"

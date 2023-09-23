@@ -15,7 +15,7 @@ function RestorePage() {
       await sendPasswordResetEmail(getAuth(), email);
     } catch (err) {
       if (!err.toString().includes("user-not-found")) {
-        setErrorMessage("Server Error. Please try later.");
+        setErrorMessage("Ошибка сервера, попробуйте позже.");
       }
     } finally {
       setOpen(true);
@@ -26,17 +26,17 @@ function RestorePage() {
 
   return (
     <div className={styles.RestorePage}>
-      <h1>Restore your password</h1>
+      <h1 className={styles["RestorePage-Heading"]}>Восстановление пароля</h1>
       <form onSubmit={handleSubmit} className={styles["RestorePage-Form"]}>
         <label htmlFor="email">
-          Email
+          Почта
           <input
             type="email"
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            title="Please fill in the email in format: mail@mailservice.domain"
+            title="Заполните в формате: mail@mailservice.domain"
             required
           />
         </label>
@@ -45,13 +45,13 @@ function RestorePage() {
             {errorMessage}
           </div>
         )}
-        <button type="submit">Restore</button>
+        <button type="submit">Восстановить</button>
       </form>
       {open && (
         <Modal toggleOpen={toggleOpen}>
           <div className={styles["modal-message"]}>
-            Check your mail, if the account is linked to this mail you will
-            receive an email with a link to reset your password.
+            Проверьте свою почту, если аккаунт привязан к этой почте, то вы
+            получите письмо с ссылкой для сброса пароля.
           </div>
         </Modal>
       )}

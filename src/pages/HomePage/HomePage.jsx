@@ -19,19 +19,19 @@ function HomePage() {
     <div className={styles.HomePage}>
       <section className={styles["HomePage-MainArticle"]}>
         <h1 className={styles["HomePage-MainHeading"]}>
-          Access to your files from anywhere in the world.
+          Доступ к вашим файлам в любой точке мира.
         </h1>
         <p className={styles["HomePage-MainParagraph"]}>
-          Share data with friends and colleagues, access files anytime,
-          anywhere.
+          Делитесь данными с друзьями и коллегами, доступ к файлам всегда,
+          везде.
         </p>
-        <ButtonLink to="register">Start using now</ButtonLink>
+        <ButtonLink to="register">Начать использовать</ButtonLink>
       </section>
       <ul className={classNames(styles["HomePage-SectionsList"], "list")}>
         <li className={styles["HomePage-Section"]}>
           <ImageSection
-            heading="Share files"
-            text="Share files with a link or create shared folders"
+            heading="Делитесь файлами"
+            text="Делитесь файлами по ссылке"
             image={
               <img
                 src={`${process.env.PUBLIC_URL}/resources/images/share.svg`}
@@ -42,8 +42,8 @@ function HomePage() {
         </li>
         <li className={styles["HomePage-Section"]}>
           <ImageSection
-            heading="Don't worry about files"
-            text="Your files will not be lost and will always be available"
+            heading="Не волнуйтесь о файлах"
+            text="Ваши файлы не потеряются и будут доступны везде"
             image={
               <img
                 src={`${process.env.PUBLIC_URL}/resources/images/secure.svg`}
@@ -54,8 +54,8 @@ function HomePage() {
         </li>
         <li className={styles["HomePage-Section"]}>
           <ImageSection
-            heading="Store a lot of information"
-            text="Store as many photos, videos, documents as you want"
+            heading="Храните множество информации"
+            text="Храните столько фотографий, видео и документов, сколько хотите"
             image={
               <img
                 src={`${process.env.PUBLIC_URL}/resources/images/server.svg`}

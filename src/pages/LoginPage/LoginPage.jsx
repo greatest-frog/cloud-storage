@@ -7,9 +7,9 @@ import Auth from "../../components/Auth/Auth";
 import styles from "./LoginPage.module.css";
 
 const authConfig = {
-  buttonPlaceholder: "Sign in",
-  question: "Don't have an account?",
-  answer: "Sign up",
+  buttonPlaceholder: "Войти",
+  question: "Нет аккаунта?",
+  answer: "Зарегистрироваться",
   answerLink: "/register",
   restore: true,
 };
@@ -29,9 +29,9 @@ function LoginPage() {
           errorString.includes("wrong-password") ||
           errorString.includes("user-not-found")
         ) {
-          setErrorMessage("Invalid email or password");
+          setErrorMessage("Неверная почта или пароль");
         } else {
-          setErrorMessage("Error. Please try later.");
+          setErrorMessage("Ошибка, попробуйте позже.");
         }
       }
     },

@@ -33,7 +33,7 @@ function Workspace({ shouldRerender, setSR }) {
   return (
     <div className={styles.Workspace}>
       <div className={styles["Workspace-Info"]}>
-        <h2 className={styles["Workspace-Title"]}>Files</h2>
+        <h2 className={styles["Workspace-Title"]}>Файлы</h2>
       </div>
       {!!userFiles.length && (
         <ul className={styles["Workspace-Files"]}>
@@ -45,7 +45,7 @@ function Workspace({ shouldRerender, setSR }) {
         </ul>
       )}
       {!userFiles.length && (
-        <div className={styles["Workspace-NoFiles"]}>No files</div>
+        <div className={styles["Workspace-NoFiles"]}>Нет файлов</div>
       )}
     </div>
   );

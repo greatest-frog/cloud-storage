@@ -24,6 +24,7 @@ function UploadMenu({
                   styles["UploadMenu-FunctionButton"],
                   styles["UploadMenu-FunctionButton_function_pause"]
                 )}
+                title="Поставить загрузку на паузу"
                 onClick={pauseUploading}
               />
             </li>
@@ -37,6 +38,7 @@ function UploadMenu({
                   styles["UploadMenu-FunctionButton"],
                   styles["UploadMenu-FunctionButton_function_resume"]
                 )}
+                title="Возобновить загрузку"
                 onClick={resumeUploading}
               />
             </li>
@@ -49,6 +51,7 @@ function UploadMenu({
                 styles["UploadMenu-FunctionButton"],
                 styles["UploadMenu-FunctionButton_function_cancel"]
               )}
+              title="Прекратить загрузку"
               onClick={() => {
                 resumeUploading();
                 cancelUploading();

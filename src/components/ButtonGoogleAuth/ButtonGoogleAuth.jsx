@@ -11,7 +11,7 @@ function ButtonGoogleAuth() {
       onClick={googleSignIn}
     >
       <div className={styles["ButtonGoogleAuth-Icon"]} role="img" alt="" />
-      Sign in with Google
+      Войти с помощью Google
     </button>
   );
 }

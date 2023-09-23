@@ -4,6 +4,11 @@
   align-items: center;
   gap: 20px;
 }
+
+.RestorePage-Heading {
+  text-align: center;
+}
+
 .RestorePage-Form {
   margin-top: 40px;
 

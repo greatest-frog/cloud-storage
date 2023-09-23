@@ -75,7 +75,7 @@ function SharePage() {
           href={userDownloadURL}
           title="Download or open file"
         >
-          Download
+          Скачать
         </a>
       )}
     </div>

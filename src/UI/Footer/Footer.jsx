@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <footer className={styles.Footer}>
-      <div className="Footer-Text">Project by greatest-frog</div>
+      <div className="Footer-Text">Проект от greatest-frog</div>
       <a
         href="https://github.com/greatest-frog"
         target="_blank"

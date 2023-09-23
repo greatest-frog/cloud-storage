@@ -7,9 +7,9 @@ import Auth from "../../components/Auth/Auth";
 import styles from "./RegisterPage.module.css";
 
 const authConfig = {
-  buttonPlaceholder: "Sign up",
-  question: "Already have an account?",
-  answer: "Sign in",
+  buttonPlaceholder: "Зарегистрироваться",
+  question: "Уже есть аккаунт?",
+  answer: "Войти",
   answerLink: "/login",
   restore: false,
 };
@@ -26,10 +26,10 @@ function RegisterPage() {
       } catch (err) {
         if (err.toString().includes("email-already-in-use")) {
           setErrorMessage(
-            "This email is already in use. Email can be used for Google account."
+            "Этот email уже используется. Email может использоваться для гугл аккаунта."
           );
         } else {
-          setErrorMessage("Error. Please try later.");
+          setErrorMessage("Ошибка, попробуйте позже.");
         }
       }
     },

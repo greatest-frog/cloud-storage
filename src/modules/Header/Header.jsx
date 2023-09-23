@@ -46,10 +46,10 @@ function Header({ positionStatic }) {
             <div className={styles["Header-UserBannerWrapper"]}>
               <UserBanner photoURL={user.photoURL} name={userName} />
             </div>
-            <Button onClick={signOutUser}>Log out</Button>
+            <Button onClick={signOutUser}>Выйти</Button>
           </>
         ) : (
-          <ButtonLink to="/login">Login</ButtonLink>
+          <ButtonLink to="/login">Войти</ButtonLink>
         )}
       </div>
     </header>
