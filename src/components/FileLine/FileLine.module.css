@@ -15,16 +15,34 @@
   background-color: var(--color-gray);
 }
 
-.FileLine:hover .FileLine-Share,
-.FileLine:hover .FileLine-Download,
-.FileLine:hover .FileLine-Delete {
+.FileLine:hover .FileLine-Button,
+.FileLine:hover .FileLine-Download {
   background-color: transparent;
 }
 
-.FileLine-Name {
+.FileLine-Photo {
+  width: 40px;
+  height: 40px;
+}
+
+.FileLine-Pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.FileLine-Preview {
   flex: 1;
   font-size: 20px;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FileLine-Icon {
+  filter: invert(7%) sepia(7%) saturate(608%) hue-rotate(22deg) brightness(96%) contrast(87%);
 }
 
 .FileLine-Info {
@@ -68,8 +86,7 @@
 }
 
 .FileLine-Download,
-.FileLine-Share,
-.FileLine-Delete {
+.FileLine-Button {
   transition: transform var(--transition-default);
 
   background-color: transparent;
@@ -78,18 +95,15 @@
   height: 25px;
 }
 
-.FileLine-Download:hover,
-.FileLine-Delete:hover,
-.FileLine-Share:hover {
+.FileLine-Button:hover {
   transform: scale(1.15, 1.15);
 }
 
-.FileLine-Share,
-.FileLine-Delete {
+.FileLine-Button {
   border: none;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 905px) {
   .FileLine-Info {
     flex-direction: column;
     align-items: flex-start;
@@ -101,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 505px) {
   .FileLine {
     flex-direction: column;
   }

@@ -13,7 +13,7 @@ function ButtonUpload({ changeUploadTask }) {
     if (file) {
       const filePath = `user/${user?.uid}/${file.name}`;
       const uploadRef = ref(getStorage(), filePath);
-      changeUploadTask(uploadBytesResumable(uploadRef, file));
+      changeUploadTask(uploadBytesResumable(uploadRef, file), file.name);
     }
   };
 

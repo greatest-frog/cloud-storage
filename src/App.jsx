@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RestorePage from "./pages/RestorePage/RestorePage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import StoragePage from "./pages/StoragePage/StoragePage";
+import SharePage from "./pages/SharePage/SharePage";
 
 import "./App.css";
 
@@ -23,7 +24,10 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/restore" element={<RestorePage />} />
             <Route path="/storage" element={<StoragePage />} />
-            <Route path="/storage/:userId/:fileName" />
+            <Route
+              path="/storage/users/:userId/files/:fileName"
+              element={<SharePage />}
+            />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>

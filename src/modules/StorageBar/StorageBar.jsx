@@ -1,5 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { setDoc, collection, getFirestore, doc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import classNames from "classnames";
 
 import ButtonUpload from "../../components/ButtonUpload/ButtonUpload";
@@ -9,11 +12,13 @@ import styles from "./StorageBar.module.css";
 import Modal from "../../components/Modal/Modal";
 
 function StorageBar({ setSR }) {
+  const [user] = useAuthState(getAuth());
   const [sideOpen, setSideOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const [uploadTask, setUploadTask] = useState();
   const [uploadProgress, setUploadProgress] = useState();
+  const [fileName, setFileName] = useState();
   const [uploadStatus, setUploadStatus] = useState("not started");
 
   useEffect(() => {
@@ -39,22 +44,35 @@ function StorageBar({ setSR }) {
               break;
           }
         },
-        () => {
+        (error) => {
           setUploadStatus("not started");
           setUploadTask();
-          setModalOpen(true);
+          if (error.code !== "storage/canceled") {
+            setModalOpen(true);
+          }
         },
         () => {
           setUploadStatus("not started");
           setUploadTask();
           setUploadProgress(0);
+          setDoc(
+            doc(
+              collection(getFirestore(), "users", user.uid, "files"),
+              fileName
+            ),
+            {
+              open: false,
+            }
+          );
+          setFileName();
           setSR(true);
         }
       );
     }
-  }, [uploadTask, uploadProgress, setSR]);
+  }, [uploadTask, uploadProgress, setSR, user, fileName]);
 
-  const changeUploadTask = useCallback((upload) => {
+  const changeUploadTask = useCallback((upload, fileN) => {
+    setFileName(fileN);
     setUploadTask(upload);
   }, []);
 

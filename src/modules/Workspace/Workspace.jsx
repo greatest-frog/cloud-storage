@@ -30,7 +30,6 @@ function Workspace({ shouldRerender, setSR }) {
     getFiles();
   }, [user, shouldRerender, setSR]);
 
-  // TODO pagination
   return (
     <div className={styles.Workspace}>
       <div className={styles["Workspace-Info"]}>
