@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cloud-storage/static/css/main.e2431e01.css",
-    "main.js": "/cloud-storage/static/js/main.d7e9110e.js",
+    "main.css": "/cloud-storage/static/css/main.b0b59378.css",
+    "main.js": "/cloud-storage/static/js/main.bd9e3061.js",
     "static/media/world.jpg": "/cloud-storage/static/media/world.0c6c69d78ba637362af4.jpg",
     "index.html": "/cloud-storage/index.html",
     "static/media/google-icon.svg": "/cloud-storage/static/media/google-icon.15b6cb611e2ef4ea86dc.svg",
@@ -15,11 +15,11 @@
     "static/media/download.svg": "/cloud-storage/static/media/download.725510cedc3cb980de94fa0ae5f2a0ab.svg",
     "static/media/pause.svg": "/cloud-storage/static/media/pause.6fdfa4a59b3d155367d5.svg",
     "static/media/resume.svg": "/cloud-storage/static/media/resume.9ee4a23d852217c79e80.svg",
-    "main.e2431e01.css.map": "/cloud-storage/static/css/main.e2431e01.css.map",
-    "main.d7e9110e.js.map": "/cloud-storage/static/js/main.d7e9110e.js.map"
+    "main.b0b59378.css.map": "/cloud-storage/static/css/main.b0b59378.css.map",
+    "main.bd9e3061.js.map": "/cloud-storage/static/js/main.bd9e3061.js.map"
   },
   "entrypoints": [
-    "static/css/main.e2431e01.css",
-    "static/js/main.d7e9110e.js"
+    "static/css/main.b0b59378.css",
+    "static/js/main.bd9e3061.js"
   ]
 }
