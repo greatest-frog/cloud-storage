@@ -13,7 +13,7 @@ function SharePage() {
   const { userId, fileName } = useParams();
   const [userDownloadURL, setUserDownloadURL] = useState();
   const [metadata, setMetadata] = useState();
-  const [no, setNo] = useState();
+  const [permission, setPermission] = useState(false);
 
   let isImage;
   if (fileName.split(".").length > 1) {
@@ -26,8 +26,11 @@ function SharePage() {
   useEffect(() => {
     if (userId && fileName) {
       getDownloadURL(ref(getStorage(), `user/${userId}/${fileName}`))
-        .then((URL) => setUserDownloadURL(URL))
-        .catch(() => setNo(true));
+        .then((URL) => {
+          setUserDownloadURL(URL);
+          setPermission(true);
+        })
+        .catch(() => setPermission(false));
       getMetadata(ref(getStorage(), `user/${userId}/${fileName}`))
         .then((meta) => {
           setMetadata(meta);
@@ -39,7 +42,9 @@ function SharePage() {
   return (
     <div className={styles.SharePage}>
       <div className={styles["SharePage-Info"]}>
-        <div className={styles["SharePage-Name"]}>{fileName}</div>
+        <div className={styles["SharePage-Name"]}>
+          {permission ? fileName : "Неизвестный файл"}
+        </div>
         <div className={styles["SharePage-Meta"]}>
           {metadata && (
             <>
@@ -67,9 +72,7 @@ function SharePage() {
           <img src={filePhoto} alt="" className={styles["SharePage-Icon"]} />
         )}
       </div>
-      {no ? (
-        "No permission"
-      ) : (
+      {permission ? (
         <a
           className={styles["SharePage-Download"]}
           href={userDownloadURL}
@@ -77,6 +80,8 @@ function SharePage() {
         >
           Скачать
         </a>
+      ) : (
+        "Нет доступа к файлу"
       )}
     </div>
   );

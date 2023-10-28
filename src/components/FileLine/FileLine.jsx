@@ -77,7 +77,7 @@ function FileLine({ file, setSR }) {
       setShared(true);
       window.open(
         `/cloud-storage/#/storage/users/${user.uid}/files/${file.name}`,
-        "_blank"
+        "_top"
       );
     } catch (e) {
       console.log("share", e);
